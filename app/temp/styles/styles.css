@@ -765,7 +765,7 @@ a {
 
 @media (min-width: 530px) {
 
-  .section-title {
+  .section-title__icon {
     margin-right: 0.5rem;
     margin-left: 0;
     margin-bottom: 0;
@@ -800,12 +800,16 @@ a {
 .feature-item__title {
   font-size: 1.6rem;
   font-weight: 300;
+  margin-top: 0.7em;
   margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 @media (min-width: 530px) {
 
   .feature-item__title {
+    text-align: left;
     font-size: 1.875rem;
+    margin-top: 1.875rem;
   }
 }
