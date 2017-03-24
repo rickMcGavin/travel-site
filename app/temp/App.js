@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11180,7 +11180,7 @@ class RevealOnScroll {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__);
 
 
@@ -11189,6 +11189,7 @@ class RevealOnScroll {
 
 class StickyHeader {
 	constructor() {
+		this.lazyImages = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.lazyload');
 		this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.site-header');
 		this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.large-hero__title');
 		this.createHeaderWaypoint();
@@ -11196,6 +11197,13 @@ class StickyHeader {
 		this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.primary-nav a');
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
+	}
+
+	refreshWaypoints() {
+		this.lazyImages.load(function() {
+			Waypoint.refreshAll();
+		});
 	}
 
 	addSmoothScrolling() {
@@ -11252,7 +11260,8 @@ class StickyHeader {
 
 
 /***/ }),
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11276,7 +11285,8 @@ var stickyHeader = new __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__["a" /
 var modal = new __WEBPACK_IMPORTED_MODULE_4__modules_Modal__["a" /* default */]();
 
 /***/ }),
-/* 7 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
